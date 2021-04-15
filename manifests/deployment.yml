@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: vasukpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vasukpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: vasukpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: vasukpipelinesjavascriptdocker 
+          image: dockerjavavasu.azurecr.io/vasukpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
